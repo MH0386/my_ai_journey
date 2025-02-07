@@ -1,2 +1,1 @@
-# learn_llm
-My journal with LLMs
+# My journal with AI
