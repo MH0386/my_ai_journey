@@ -1,9 +1,9 @@
 [project]
 name = "my-ai-journey"
 version = "0.1.0"
-description = "Add your description here"
+description = "My journey with AI"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.10"
 dependencies = []
 
 [dependency-groups]
