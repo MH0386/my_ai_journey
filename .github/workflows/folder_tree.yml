@@ -9,7 +9,7 @@ jobs:
         uses: jaywcjlove/github-action-folder-tree@main
         id: tree
         with:
-          exclude: ".git"      
+          exclude: ".git|renovate.json|.deepsource.toml"      
       - name: Modify README.md
         uses: jaywcjlove/github-action-modify-file-content@main
         with:
