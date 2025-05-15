@@ -11,8 +11,12 @@ dependencies = [
     "keras>=3.9.2",
     "matplotlib>=3.10.3",
     "notebook>=7.4.2",
+    "peft>=0.15.2",
+    "python-dotenv>=1.1.0",
     "scikit-learn>=1.6.1",
     "seaborn>=0.13.2",
+    "trl>=0.17.0",
+    "wandb>=0.19.11",
 ]
 
 [dependency-groups]
