@@ -9,9 +9,14 @@ dependencies = []
 [dependency-groups]
 dev = [
     "pylint>=3.3.7",
+    "ruff>=0.11.9",
     "ty>=0.0.1a2",
     "typos>=1.32.0",
 ]
 
 [tool.typos.default.extend-words]
-auxilliary = "auxilliary"
+#auxilliary = "auxilliary"
+#maped = "maped"
+#Chatacter = "Chatacter"
+#mak = "mak"
+#Ba = "Ba"
