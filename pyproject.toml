@@ -24,13 +24,6 @@ dev = [
     "typos>=1.32.0",
 ]
 
-[tool.typos.default.extend-words]
-#auxilliary = "auxilliary"
-#maped = "maped"
-#Chatacter = "Chatacter"
-#mak = "mak"
-#Ba = "Ba"
-
 [tool.pyright]
 reportUnknownMemberType = false
 reportMissingImports = false
