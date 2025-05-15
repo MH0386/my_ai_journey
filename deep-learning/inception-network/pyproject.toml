@@ -19,4 +19,8 @@ dependencies = [
 dev = [
     "pylint>=3.3.7",
     "ty>=0.0.1a2",
+    "typos>=1.32.0",
 ]
+
+[tool.typos.default.extend-words]
+auxilliary = "auxilliary"
