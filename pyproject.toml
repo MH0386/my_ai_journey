@@ -33,3 +33,6 @@ dev = [
 [tool.pyright]
 reportUnknownMemberType = false
 reportMissingImports = false
+
+[tool.pyrefly.errors]
+import-error = false

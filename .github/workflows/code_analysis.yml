@@ -40,3 +40,14 @@ jobs:
         run: uv run ty check
       - name: Minimize uv cache
         run: uv cache prune --ci
+  pyrefly:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Actions Repository
+        uses: actions/checkout@v4
+      - name: Setup UV
+        uses: ./.github/actions/uv
+      - name: Run Pyrefly
+        run: uv run pyrefly check
+      - name: Minimize uv cache
+        run: uv cache prune --ci
