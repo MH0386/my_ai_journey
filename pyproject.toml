@@ -24,10 +24,10 @@ dependencies = [
 [dependency-groups]
 dev = [
     "pylint>=3.3.7",
-    "pyrefly>=0.15.1",
+    "pyrefly>=0.15.2",
     "pyright>=1.1.400",
-    "ruff>=0.11.9",
-    "ty>=0.0.1a2",
+    "ruff>=0.11.10",
+    "ty>=0.0.1a4",
     "typos>=1.32.0",
 ]
 
