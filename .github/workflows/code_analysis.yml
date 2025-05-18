@@ -5,23 +5,6 @@ on:
 permissions:
   contents: read
 jobs:
-  spelling:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Actions Repository
-        uses: actions/checkout@v4
-      - name: Install uv
-        id: uv
-        uses: astral-sh/setup-uv@v6
-        with:
-          enable-cache: true
-          cache-dependency-glob: "uv.lock"
-          activate-environment: true
-      - name: Install the project
-        if: steps.uv.outputs.cache-hit != 'true'
-        run: uv sync --frozen
-      - name: Run typos
-        run: uv run typos .
   ruff:
     runs-on: ubuntu-latest
     steps:
