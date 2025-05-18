@@ -37,3 +37,6 @@ reportMissingImports = false
 
 [tool.pyrefly.errors]
 import-error = false
+
+[tool.typos.default.extend-words]
+Chatacter = "Chatacter"
