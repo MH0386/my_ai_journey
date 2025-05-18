@@ -4,16 +4,22 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
-env:
-  UV_CACHE_DIR: /tmp/.uv-cache
 jobs:
   spelling:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Actions Repository
         uses: actions/checkout@v4
-      - name: Setup UV
-        uses: ./.github/actions/uv
+      - name: Install uv
+        id: uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+          activate-environment: true
+      - name: Install the project
+        if: steps.uv.outputs.cache-hit != 'true'
+        run: uv sync --frozen
       - name: Run typos
         run: uv run typos . --config ./pyproject.toml
       - name: Minimize uv cache
@@ -23,8 +29,16 @@ jobs:
     steps:
       - name: Checkout Actions Repository
         uses: actions/checkout@v4
-      - name: Setup UV
-        uses: ./.github/actions/uv
+      - name: Install uv
+        id: uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+          activate-environment: true
+      - name: Install the project
+        if: steps.uv.outputs.cache-hit != 'true'
+        run: uv sync --frozen
       - name: Run Ruff
         run: uv run ruff check .
       - name: Minimize uv cache
@@ -34,8 +48,16 @@ jobs:
     steps:
       - name: Checkout Actions Repository
         uses: actions/checkout@v4
-      - name: Setup UV
-        uses: ./.github/actions/uv
+      - name: Install uv
+        id: uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+          activate-environment: true
+      - name: Install the project
+        if: steps.uv.outputs.cache-hit != 'true'
+        run: uv sync --frozen
       - name: Run Ty
         run: uv run ty check
       - name: Minimize uv cache
@@ -45,8 +67,16 @@ jobs:
     steps:
       - name: Checkout Actions Repository
         uses: actions/checkout@v4
-      - name: Setup UV
-        uses: ./.github/actions/uv
+      - name: Install uv
+        id: uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+          activate-environment: true
+      - name: Install the project
+        if: steps.uv.outputs.cache-hit != 'true'
+        run: uv sync --frozen
       - name: Run Pyrefly
         run: uv run pyrefly check
       - name: Minimize uv cache
