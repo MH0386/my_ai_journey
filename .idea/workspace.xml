@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e36374-ad4b-4e64-b4df-5539e188081b" name="Changes" comment="fix pyplot">
+    <list default="true" id="04e36374-ad4b-4e64-b4df-5539e188081b" name="Changes" comment="Remove Kaggle Notebook: Logistic Regression With Least Squares Technique">
       <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/machine-learning/logistic-regression-with-kfold.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/machine-learning/logistic-regression-with-least-squares-technique.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/my_ai_journey.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my_ai_journey.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/machine-learning/logistic_regression_with_least_squares_technique.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/machine-learning/logistic_regression_with_least_squares_technique.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/machine-learning/logistic_regression_with_least_squares_technique.ipynb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,35 +42,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "D:/Development/my_ai_journey",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "ml.llm.AIAssistantPromptsLibrary",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Development/my_ai_journey&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.AIAssistantPromptsLibrary&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PY-251.25410.159" />
-        <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
-      </set>
-    </attachedChunks>
-  </component>
+}</component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="04e36374-ad4b-4e64-b4df-5539e188081b" name="Changes" comment="" />
@@ -78,6 +72,7 @@
       <updated>1749553951757</updated>
       <workItem from="1749553954231" duration="7641000" />
       <workItem from="1749569955687" duration="6007000" />
+      <workItem from="1749585797340" duration="488000" />
     </task>
     <task id="LOCAL-00001" summary="Add autoencoder implementation and update project configuration files&#10;&#10;Integrates an autoencoder model for CIFAR-10 dataset, including noisy image training and visualization. Adds related configuration files for project structure and dependencies (`.idea`, `uv.lock`).">
       <option name="closed" value="true" />
@@ -122,7 +117,9 @@
     <MESSAGE value="Remove pyright dependency and update dev dependencies&#10;&#10;Removes `pyright` as a dev dependency and updates the `ruff` version to `&gt;=0.11.13` in `pyproject.toml` and `uv.lock`." />
     <MESSAGE value="format" />
     <MESSAGE value="fix pyplot" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix pyplot" />
+    <MESSAGE value="Remove Kaggle Notebook: Logistic Regression With Least Squares Technique | Version 7" />
+    <MESSAGE value="Remove Kaggle Notebook: Logistic Regression With Least Squares Technique" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove Kaggle Notebook: Logistic Regression With Least Squares Technique" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
