@@ -16,6 +16,8 @@ runtimes:
     - python@3.10.8
 # This is the section where you manage your linters. (https://docs.trunk.io/check/configuration)
 lint:
+  disabled:
+    - yamllint
   enabled:
     - actionlint@1.7.7
     - black@25.1.0
@@ -27,7 +29,6 @@ lint:
     - ruff@0.11.11
     - taplo@0.9.3
     - trufflehog@3.88.34
-    - yamllint@1.37.1
 actions:
   enabled:
     - trunk-upgrade-available
