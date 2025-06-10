@@ -5,36 +5,30 @@ description = "My journey with AI"
 readme = "README.md"
 requires-python = ">=3.10, <3.13"
 dependencies = [
-    "bitsandbytes>=0.45.5",
-    "docling>=2.32.0",
-    "ipykernel>=6.29.5",
-    "ipywidgets>=8.1.7",
-    "jupyter>=1.1.1",
-    "kagglehub>=0.3.12",
-    "matplotlib>=3.10.3",
-    "notebook>=7.4.2",
-    "opencv-python>=4.11.0.86",
-    "peft>=0.15.2",
-    "python-dotenv>=1.1.0",
-    "scikit-learn>=1.6.1",
-    "seaborn>=0.13.2",
-    "tensorflow>=2.19.0",
-    "wandb>=0.19.11",
+  "bitsandbytes>=0.45.5",
+  "docling>=2.32.0",
+  "ipykernel>=6.29.5",
+  "ipywidgets>=8.1.7",
+  "jupyter>=1.1.1",
+  "kagglehub>=0.3.12",
+  "matplotlib>=3.10.3",
+  "notebook>=7.4.2",
+  "opencv-python>=4.11.0.86",
+  "peft>=0.15.2",
+  "python-dotenv>=1.1.0",
+  "scikit-learn>=1.6.1",
+  "seaborn>=0.13.2",
+  "tensorflow>=2.19.0",
+  "wandb>=0.19.11",
 ]
 
 [dependency-groups]
-dev = [
-    "pylint>=3.3.7",
-    "pyrefly>=0.15.2",
-    "pyright>=1.1.400",
-    "ruff>=0.11.10",
-    "ty>=0.0.1a4",
-    "typos>=1.32.0",
-]
+dev = ["pyright>=1.1.400", "ruff>=0.11.10", "ty>=0.0.1a6"]
 
 [tool.pyright]
 reportUnknownMemberType = false
 reportMissingImports = false
+# reportUnknownVariableType = false
 
 [tool.pyrefly.errors]
 import-error = false

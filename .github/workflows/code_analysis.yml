@@ -1,58 +1,49 @@
-name: Code Analysis
+name: Trunk Code Quality
 on:
   push:
-  workflow_dispatch:
-permissions:
-  contents: read
+  pull_request:
+permissions: read-all
+concurrency:
+  group: ${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
 jobs:
-  ruff:
+  trunk:
+    name: Trunk Code Quality
     runs-on: ubuntu-latest
+    permissions:
+      checks: write
+      contents: read
     steps:
-      - name: Checkout Actions Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
       - name: Install uv
-        id: uv
         uses: astral-sh/setup-uv@v6
+        id: uv
         with:
           enable-cache: true
           cache-dependency-glob: "uv.lock"
           activate-environment: true
       - name: Install the project
-        if: steps.uv.outputs.cache-hit != 'true'
         run: uv sync --frozen
-      - name: Run Ruff
-        run: uv run ruff check .
-  ty:
+      - name: Trunk Code Quality
+        uses: trunk-io/trunk-action@v1
+        with:
+          arguments: --github-annotate-new-only=false
+  compatibility:
+    name: Check Dependency Compatibility
     runs-on: ubuntu-latest
+    permissions:
+      checks: write
+      contents: read
     steps:
-      - name: Checkout Actions Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
       - name: Install uv
-        id: uv
         uses: astral-sh/setup-uv@v6
+        id: uv
         with:
           enable-cache: true
           cache-dependency-glob: "uv.lock"
           activate-environment: true
       - name: Install the project
-        if: steps.uv.outputs.cache-hit != 'true'
-        run: uv sync --frozen
-      - name: Run Ty
-        run: uv run ty check
-  pyrefly:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Actions Repository
-        uses: actions/checkout@v4
-      - name: Install uv
-        id: uv
-        uses: astral-sh/setup-uv@v6
-        with:
-          enable-cache: true
-          cache-dependency-glob: "uv.lock"
-          activate-environment: true
-      - name: Install the project
-        if: steps.uv.outputs.cache-hit != 'true'
-        run: uv sync --frozen
-      - name: Run Pyrefly
-        run: uv run pyrefly check
+        run: uv sync --frozen --no-install-project
