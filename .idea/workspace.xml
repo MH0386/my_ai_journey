@@ -4,16 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e36374-ad4b-4e64-b4df-5539e188081b" name="Changes" comment="Update line separator">
+    <list default="true" id="04e36374-ad4b-4e64-b4df-5539e188081b" name="Changes" comment="Set up pre-commit hooks and configuration">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_10_2025_11_54_PM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_11_2025_12_20_AM_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_11_2025_12_20_AM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.pre-commit-config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/pre-commit" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.trunk/configs/.yamllint.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.trunk/configs/ruff.toml" beforeDir="false" afterPath="$PROJECT_DIR$/.trunk/configs/ruff.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.trunk/trunk.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.trunk/trunk.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kubernetes Pod" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,6 +38,10 @@
     &quot;url&quot;: &quot;https://github.com/MH0386/my_ai_journey.git&quot;,
     &quot;accountId&quot;: &quot;a6a8c1a7-aa82-4e96-8030-be8e3e85e57f&quot;
   }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
 }</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -69,7 +82,7 @@
       <updated>1749553951757</updated>
       <workItem from="1749553954231" duration="7641000" />
       <workItem from="1749569955687" duration="6007000" />
-      <workItem from="1749585797340" duration="2768000" />
+      <workItem from="1749585797340" duration="4815000" />
     </task>
     <task id="LOCAL-00001" summary="Add autoencoder implementation and update project configuration files&#10;&#10;Integrates an autoencoder model for CIFAR-10 dataset, including noisy image training and visualization. Adds related configuration files for project structure and dependencies (`.idea`, `uv.lock`).">
       <option name="closed" value="true" />
@@ -127,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749586751395</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="format">
+      <option name="closed" value="true" />
+      <created>1749588999069</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1749588999069</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,13 +168,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add autoencoder implementation and update project configuration files&#10;&#10;Integrates an autoencoder model for CIFAR-10 dataset, including noisy image training and visualization. Adds related configuration files for project structure and dependencies (`.idea`, `uv.lock`)." />
     <MESSAGE value="Remove pyright dependency and update dev dependencies&#10;&#10;Removes `pyright` as a dev dependency and updates the `ruff` version to `&gt;=0.11.13` in `pyproject.toml` and `uv.lock`." />
-    <MESSAGE value="format" />
     <MESSAGE value="fix pyplot" />
     <MESSAGE value="Remove Kaggle Notebook: Logistic Regression With Least Squares Technique | Version 7" />
     <MESSAGE value="Remove Kaggle Notebook: Logistic Regression With Least Squares Technique" />
     <MESSAGE value="Remove Kaggle Notebook: Logistic Regression With K-Fold Technique" />
     <MESSAGE value="Update line separator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update line separator" />
+    <MESSAGE value="format" />
+    <MESSAGE value="Set up pre-commit hooks and configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set up pre-commit hooks and configuration" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
