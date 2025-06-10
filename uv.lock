@@ -496,7 +496,7 @@ wheels = [
 
 [[package]]
 name = "docling-core"
-version = "2.34.1"
+version = "2.34.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jsonref" },
@@ -510,9 +510,9 @@ dependencies = [
     { name = "typer" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/99/56/e6017eb07d1d895fe411fe1723e8a28c9fef36e4ef18bb81a83492969f34/docling_core-2.34.1.tar.gz", hash = "sha256:c9cdf6413693a5bdfce7d276644d16a337938ce07ace643c460e2d9da1787c01", size = 142697, upload-time = "2025-06-08T18:12:25.566Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/2a/4c/5657997c78900d7cb3b9fe7d336ec89c195fe5d630610b7c49c07fee3809/docling_core-2.34.2.tar.gz", hash = "sha256:418555e4025036311fb2de46cbcaf70169827c6bd79856cff1930e4833cdae6d", size = 142774, upload-time = "2025-06-10T15:19:56.129Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/f8/4d/e360e87a4cc54056cbb6838051254bd13b01a44a195d9d93a170f5e0cac3/docling_core-2.34.1-py3-none-any.whl", hash = "sha256:c7f2c31d84791a0d8f7b2996abceef0c0debbff30725de899fb62401278ccb9f", size = 146743, upload-time = "2025-06-08T18:12:22.715Z" },
+    { url = "https://files.pythonhosted.org/packages/34/de/f35ea288aa9cab2b85ecd99d4415453a5bd27b28a02a941f58925008fa17/docling_core-2.34.2-py3-none-any.whl", hash = "sha256:ed33345aab4af6dccace27344e24a47c10bc164145192ba625c19c1031ceb9f3", size = 146787, upload-time = "2025-06-10T15:19:54.128Z" },
 ]
 
 [package.optional-dependencies]
@@ -877,7 +877,7 @@ wheels = [
 
 [[package]]
 name = "huggingface-hub"
-version = "0.32.4"
+version = "0.32.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "filelock" },
@@ -889,9 +889,9 @@ dependencies = [
     { name = "tqdm" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/60/c8/4f7d270285c46324fd66f62159eb16739aa5696f422dba57678a8c6b78e9/huggingface_hub-0.32.4.tar.gz", hash = "sha256:f61d45cd338736f59fb0e97550b74c24ee771bcc92c05ae0766b9116abe720be", size = 424494, upload-time = "2025-06-03T09:59:46.105Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/f5/96/179f323578414b6fcc6aa254ecc4d27dc87ded90a271b147c634cf860784/huggingface_hub-0.32.5.tar.gz", hash = "sha256:8328f848218e3212647cec77eab9fdfc2590e8117d979b925439bc01042a20de", size = 425011, upload-time = "2025-06-10T16:03:12.527Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/67/8b/222140f3cfb6f17b0dd8c4b9a0b36bd4ebefe9fb0098ba35d6960abcda0f/huggingface_hub-0.32.4-py3-none-any.whl", hash = "sha256:37abf8826b38d971f60d3625229221c36e53fe58060286db9baf619cfbf39767", size = 512101, upload-time = "2025-06-03T09:59:44.099Z" },
+    { url = "https://files.pythonhosted.org/packages/45/6e/36c929e105c9ff57a0a792780deaadf2c02f055f65ef96dc9cd597be9f23/huggingface_hub-0.32.5-py3-none-any.whl", hash = "sha256:6df8d5f42034a1b61daac60eed04acf348d337a4bd83aa448d4235cfb003e379", size = 512792, upload-time = "2025-06-10T16:03:10.106Z" },
 ]
 
 [[package]]
