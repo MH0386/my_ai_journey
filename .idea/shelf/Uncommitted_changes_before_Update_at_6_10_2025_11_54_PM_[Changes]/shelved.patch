@@ -1,0 +1,189 @@
+Index: .trunk/configs/ruff.toml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Generic, formatter-friendly config.\r\nselect = [\"B\", \"D3\", \"E\", \"F\"]\r\n\r\n# Never enforce `E501` (line length violations). This should be handled by formatters.\r\nignore = [\"E501\"]\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.trunk/configs/ruff.toml b/.trunk/configs/ruff.toml
+--- a/.trunk/configs/ruff.toml	(revision 9c7260948f05e6bf108b52319314b8038890fe39)
++++ b/.trunk/configs/ruff.toml	(date 1749588751836)
+@@ -1,5 +1,73 @@
+-# Generic, formatter-friendly config.
+-select = ["B", "D3", "E", "F"]
++exclude=[
++  ".bzr",
++  ".direnv",
++  ".eggs",
++  ".git",
++  ".git-rewrite",
++  ".hg",
++  ".ipynb_checkpoints",
++  ".mypy_cache",
++  ".nox",
++  ".pants.d",
++  ".pyenv",
++  ".pytest_cache",
++  ".pytype",
++  ".ruff_cache",
++  ".svn",
++  ".tox",
++  ".venv",
++  ".vscode",
++  "__pypackages__",
++  "_build",
++  "buck-out",
++  "build",
++  "dist",
++  "node_modules",
++  "site-packages",
++  "venv",
++]
++
++indent-width=4
++line-length=88
++target-version="py310"
+ 
+-# Never enforce `E501` (line length violations). This should be handled by formatters.
+-ignore = ["E501"]
++[lint]
++  # Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`) codes by default.
++  # Unlike Flake8, Ruff doesn't enable pycodestyle warnings (`W`) or
++  # McCabe complexity (`C901`) by default.
++  ignore=[]
++  select=["E4", "E7", "E9", "F"]
++
++  # Allow fix for all enabled rules (when `--fix`) is provided.
++  fixable=["ALL"]
++  unfixable=[]
++
++  # Allow unused variables when underscore-prefixed.
++  dummy-variable-rgx="^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
++
++[format]
++  # Like Black, use double quotes for strings.
++  quote-style="double"
++
++  # Like Black, indent with spaces, rather than tabs.
++  indent-style="space"
++
++  # Like Black, respect magic trailing commas.
++  skip-magic-trailing-comma=false
++
++  # Like Black, automatically detect the appropriate line ending.
++  line-ending="auto"
++
++  # Enable auto-formatting of code examples in docstrings. Markdown,
++  # reStructuredText code/literal blocks and doctests are all supported.
++  #
++  # This is currently disabled by default, but it is planned for this
++  # to be opt-out in the future.
++  docstring-code-format=false
++
++  # Set the line length limit used when formatting code snippets in
++  # docstrings.
++  #
++  # This only has an effect when the `docstring-code-format` setting is
++  # enabled.
++  docstring-code-line-length="dynamic"
+Index: .trunk/configs/.yamllint.yaml
+===================================================================
+diff --git a/.trunk/configs/.yamllint.yaml b/.trunk/configs/.yamllint.yaml
+deleted file mode 100644
+--- a/.trunk/configs/.yamllint.yaml	(revision 9c7260948f05e6bf108b52319314b8038890fe39)
++++ /dev/null	(revision 9c7260948f05e6bf108b52319314b8038890fe39)
+@@ -1,7 +0,0 @@
+-rules:
+-  quoted-strings:
+-    required: only-when-needed
+-    extra-allowed: ["{|}"]
+-  key-duplicates: {}
+-  octal-values:
+-    forbid-implicit-octal: true
+Index: .trunk/trunk.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># This file controls the behavior of Trunk: https://docs.trunk.io/cli\r\n# To learn more about the format of this file, see https://docs.trunk.io/reference/trunk-yaml\r\nversion: 0.1\r\ncli:\r\n  version: 1.22.15\r\n# Trunk provides extensibility via plugins. (https://docs.trunk.io/plugins)\r\nplugins:\r\n  sources:\r\n    - id: trunk\r\n      ref: v1.6.8\r\n      uri: https://github.com/trunk-io/plugins\r\n# Many linters and tools depend on runtimes - configure them here. (https://docs.trunk.io/runtimes)\r\nruntimes:\r\n  enabled:\r\n    - node@18.20.5\r\n    - python@3.10.8\r\n# This is the section where you manage your linters. (https://docs.trunk.io/check/configuration)\r\nlint:\r\n  enabled:\r\n    - actionlint@1.7.7\r\n    - black@25.1.0\r\n    - checkov@3.2.432\r\n    - git-diff-check\r\n    - markdownlint@0.45.0\r\n    - prettier@3.5.3\r\n    - renovate@40.0.6\r\n    - ruff@0.11.11\r\n    - taplo@0.9.3\r\n    - trufflehog@3.88.34\r\n    - yamllint@1.37.1\r\nactions:\r\n  enabled:\r\n    - trunk-upgrade-available\r\n    - trunk-announce\r\n    - trunk-check-pre-push\r\n    - trunk-fmt-pre-commit\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.trunk/trunk.yaml b/.trunk/trunk.yaml
+--- a/.trunk/trunk.yaml	(revision 9c7260948f05e6bf108b52319314b8038890fe39)
++++ b/.trunk/trunk.yaml	(date 1749588751858)
+@@ -16,6 +16,8 @@
+     - python@3.10.8
+ # This is the section where you manage your linters. (https://docs.trunk.io/check/configuration)
+ lint:
++  disabled:
++    - yamllint
+   enabled:
+     - actionlint@1.7.7
+     - black@25.1.0
+@@ -27,7 +29,6 @@
+     - ruff@0.11.11
+     - taplo@0.9.3
+     - trufflehog@3.88.34
+-    - yamllint@1.37.1
+ actions:
+   enabled:
+     - trunk-upgrade-available
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"04e36374-ad4b-4e64-b4df-5539e188081b\" name=\"Changes\" comment=\"Remove Kaggle Notebook: Logistic Regression With K-Fold Technique\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;MH0386&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/MH0386/my_ai_journey.git&quot;,\r\n    &quot;accountId&quot;: &quot;a6a8c1a7-aa82-4e96-8030-be8e3e85e57f&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;customColor&quot;: &quot;&quot;,\r\n  &quot;associatedIndex&quot;: 5\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2yJY4MMfyEuvVnHcZeWvQD2MZzc\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;D:/Development/my_ai_journey&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.AIAssistantPromptsLibrary&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"04e36374-ad4b-4e64-b4df-5539e188081b\" name=\"Changes\" comment=\"\" />\r\n      <created>1749553951757</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1749553951757</updated>\r\n      <workItem from=\"1749553954231\" duration=\"7641000\" />\r\n      <workItem from=\"1749569955687\" duration=\"6007000\" />\r\n      <workItem from=\"1749585797340\" duration=\"838000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Add autoencoder implementation and update project configuration files&#10;&#10;Integrates an autoencoder model for CIFAR-10 dataset, including noisy image training and visualization. Adds related configuration files for project structure and dependencies (`.idea`, `uv.lock`).\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1749555162128</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1749555162128</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Remove pyright dependency and update dev dependencies&#10;&#10;Removes `pyright` as a dev dependency and updates the `ruff` version to `&gt;=0.11.13` in `pyproject.toml` and `uv.lock`.\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1749555691494</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1749555691494</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"format\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1749570059418</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1749570059418</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"fix pyplot\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1749570141781</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1749570141781</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Remove Kaggle Notebook: Logistic Regression With Least Squares Technique\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1749586358106</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1749586358106</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Remove Kaggle Notebook: Logistic Regression With K-Fold Technique\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1749586411004</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1749586411004</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"7\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Add autoencoder implementation and update project configuration files&#10;&#10;Integrates an autoencoder model for CIFAR-10 dataset, including noisy image training and visualization. Adds related configuration files for project structure and dependencies (`.idea`, `uv.lock`).\" />\r\n    <MESSAGE value=\"Remove pyright dependency and update dev dependencies&#10;&#10;Removes `pyright` as a dev dependency and updates the `ruff` version to `&gt;=0.11.13` in `pyproject.toml` and `uv.lock`.\" />\r\n    <MESSAGE value=\"format\" />\r\n    <MESSAGE value=\"fix pyplot\" />\r\n    <MESSAGE value=\"Remove Kaggle Notebook: Logistic Regression With Least Squares Technique | Version 7\" />\r\n    <MESSAGE value=\"Remove Kaggle Notebook: Logistic Regression With Least Squares Technique\" />\r\n    <MESSAGE value=\"Remove Kaggle Notebook: Logistic Regression With K-Fold Technique\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Remove Kaggle Notebook: Logistic Regression With K-Fold Technique\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 9c7260948f05e6bf108b52319314b8038890fe39)
++++ b/.idea/workspace.xml	(date 1749588751863)
+@@ -4,7 +4,12 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="04e36374-ad4b-4e64-b4df-5539e188081b" name="Changes" comment="Remove Kaggle Notebook: Logistic Regression With K-Fold Technique" />
++    <list default="true" id="04e36374-ad4b-4e64-b4df-5539e188081b" name="Changes" comment="Update line separator">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.trunk/configs/.yamllint.yaml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.trunk/configs/ruff.toml" beforeDir="false" afterPath="$PROJECT_DIR$/.trunk/configs/ruff.toml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.trunk/trunk.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.trunk/trunk.yaml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -64,7 +69,7 @@
+       <updated>1749553951757</updated>
+       <workItem from="1749553954231" duration="7641000" />
+       <workItem from="1749569955687" duration="6007000" />
+-      <workItem from="1749585797340" duration="838000" />
++      <workItem from="1749585797340" duration="2768000" />
+     </task>
+     <task id="LOCAL-00001" summary="Add autoencoder implementation and update project configuration files&#10;&#10;Integrates an autoencoder model for CIFAR-10 dataset, including noisy image training and visualization. Adds related configuration files for project structure and dependencies (`.idea`, `uv.lock`).">
+       <option name="closed" value="true" />
+@@ -114,7 +119,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1749586411004</updated>
+     </task>
+-    <option name="localTasksCounter" value="7" />
++    <task id="LOCAL-00007" summary="Update line separator">
++      <option name="closed" value="true" />
++      <created>1749586751395</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1749586751395</updated>
++    </task>
++    <option name="localTasksCounter" value="8" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -139,7 +152,8 @@
+     <MESSAGE value="Remove Kaggle Notebook: Logistic Regression With Least Squares Technique | Version 7" />
+     <MESSAGE value="Remove Kaggle Notebook: Logistic Regression With Least Squares Technique" />
+     <MESSAGE value="Remove Kaggle Notebook: Logistic Regression With K-Fold Technique" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Remove Kaggle Notebook: Logistic Regression With K-Fold Technique" />
++    <MESSAGE value="Update line separator" />
++    <option name="LAST_COMMIT_MESSAGE" value="Update line separator" />
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />

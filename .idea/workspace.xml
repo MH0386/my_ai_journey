@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e36374-ad4b-4e64-b4df-5539e188081b" name="Changes" comment="Remove Kaggle Notebook: Logistic Regression With K-Fold Technique" />
+    <list default="true" id="04e36374-ad4b-4e64-b4df-5539e188081b" name="Changes" comment="Update line separator">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.trunk/configs/.yamllint.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.trunk/configs/ruff.toml" beforeDir="false" afterPath="$PROJECT_DIR$/.trunk/configs/ruff.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.trunk/trunk.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.trunk/trunk.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +69,7 @@
       <updated>1749553951757</updated>
       <workItem from="1749553954231" duration="7641000" />
       <workItem from="1749569955687" duration="6007000" />
-      <workItem from="1749585797340" duration="838000" />
+      <workItem from="1749585797340" duration="2768000" />
     </task>
     <task id="LOCAL-00001" summary="Add autoencoder implementation and update project configuration files&#10;&#10;Integrates an autoencoder model for CIFAR-10 dataset, including noisy image training and visualization. Adds related configuration files for project structure and dependencies (`.idea`, `uv.lock`).">
       <option name="closed" value="true" />
@@ -114,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749586411004</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update line separator">
+      <option name="closed" value="true" />
+      <created>1749586751395</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1749586751395</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,7 +152,8 @@
     <MESSAGE value="Remove Kaggle Notebook: Logistic Regression With Least Squares Technique | Version 7" />
     <MESSAGE value="Remove Kaggle Notebook: Logistic Regression With Least Squares Technique" />
     <MESSAGE value="Remove Kaggle Notebook: Logistic Regression With K-Fold Technique" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove Kaggle Notebook: Logistic Regression With K-Fold Technique" />
+    <MESSAGE value="Update line separator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update line separator" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
