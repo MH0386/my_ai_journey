@@ -29,6 +29,8 @@ jobs:
         uses: trunk-io/trunk-action@v1
         with:
           arguments: --github-annotate-new-only=false
+      - name: Format Codebase
+        run: trunk fmt -a
       - name: Autofix
         uses: autofix-ci/action@v1
   compatibility:
