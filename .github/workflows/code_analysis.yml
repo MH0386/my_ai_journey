@@ -8,6 +8,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   format_codebase:
+    name: Format Code
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -30,6 +31,7 @@ jobs:
     permissions:
       checks: write
       contents: read
+    needs: [format_codebase]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
