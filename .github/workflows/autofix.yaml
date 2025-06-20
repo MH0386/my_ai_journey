@@ -2,7 +2,8 @@ name: autofix.ci
 on:
   push:
   pull_request:
-permissions: read-all
+permissions:
+  contents: read
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref_name }}
   cancel-in-progress: true
@@ -15,6 +16,6 @@ jobs:
       - name: Trunk install
         uses: trunk-io/trunk-action/setup@v1
       - name: Format Codebase
-        run: $TRUNK_PATH fmt -a
+        run: $TRUNK_PATH fmt -a --ci
       - name: Autofix
         uses: autofix-ci/action@v1
