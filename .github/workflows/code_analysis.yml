@@ -31,7 +31,7 @@ jobs:
     permissions:
       checks: write
       contents: read
-    needs: [format_codebase]
+    needs: [format_codebase, compatibility]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
