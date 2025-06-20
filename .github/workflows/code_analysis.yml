@@ -4,20 +4,26 @@ on:
   pull_request:
 permissions: read-all
 concurrency:
-  group: ${{ github.head_ref || github.run_id }}
+  group: ${{ github.workflow }}-${{ github.ref_name }}
   cancel-in-progress: true
 jobs:
-  autofix:
+  format_codebase:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
       - name: Trunk install
         uses: trunk-io/trunk-action/setup@v1
       - name: Format Codebase
         run: $TRUNK_PATH fmt -a
-      - name: Autofix
-        uses: autofix-ci/action@v1
+      - name: Commit
+        uses: stefanzweifel/git-auto-commit-action@v6
+        with:
+          commit_message: Format the code
   trunk:
     name: Trunk Code Quality
     runs-on: ubuntu-latest
