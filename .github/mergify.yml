@@ -63,12 +63,10 @@ queue_rules:
       - and:
           - "check-success = DeepSource: Secrets"
           - "check-success = DeepSource: Python"
-          - check-success = CodeFactor
+          - "check-success = DeepSource: Transformers"
           - check-success = GitGuardian Security Checks
-          - check-success = SonarCloud Code Analysis
           - check-success = Trunk Check
           - check-success = Check Dependency Compatibility
-          - check-success = CodeRabbit
       - or:
           - check-success = pre-commit.ci - push
           - check-success = pre-commit.ci - pr
