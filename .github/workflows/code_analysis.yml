@@ -16,15 +16,15 @@ jobs:
       contents: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           ref: ${{ github.head_ref }}
       - name: Trunk install
-        uses: trunk-io/trunk-action/setup@v1
+        uses: trunk-io/trunk-action/setup@75699af9e26881e564e9d832ef7dc3af25ec031b # v1
       - name: Format Codebase
         run: $TRUNK_PATH fmt -a
       - name: Commit
-        uses: stefanzweifel/git-auto-commit-action@v6
+        uses: stefanzweifel/git-auto-commit-action@778341af668090896ca464160c2def5d1d1a3eb0 # v6
         with:
           commit_message: Format the code
   trunk:
@@ -36,9 +36,9 @@ jobs:
     needs: [format_codebase, compatibility]
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - name: Install uv
-        uses: astral-sh/setup-uv@v6
+        uses: astral-sh/setup-uv@445689ea25e0de0a23313031f5fe577c74ae45a1 # v6
         id: uv
         with:
           enable-cache: true
@@ -47,7 +47,7 @@ jobs:
       - name: Install the project
         run: uv sync --frozen
       - name: Trunk Code Quality
-        uses: trunk-io/trunk-action@v1
+        uses: trunk-io/trunk-action@75699af9e26881e564e9d832ef7dc3af25ec031b # v1
         with:
           arguments: --github-annotate-new-only=false
   compatibility:
@@ -58,9 +58,9 @@ jobs:
       contents: read
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - name: Install uv
-        uses: astral-sh/setup-uv@v6
+        uses: astral-sh/setup-uv@445689ea25e0de0a23313031f5fe577c74ae45a1 # v6
         id: uv
         with:
           enable-cache: true
