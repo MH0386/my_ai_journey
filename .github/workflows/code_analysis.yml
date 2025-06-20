@@ -15,7 +15,7 @@ jobs:
       - name: Trunk install
         uses: trunk-io/trunk-action/setup@v1
       - name: Format Codebase
-        run: trunk fmt -a
+        run: $TRUNK_PATH fmt -a
       - name: Autofix
         uses: autofix-ci/action@v1
   trunk:
