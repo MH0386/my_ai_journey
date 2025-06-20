@@ -1,0 +1,20 @@
+name: autofix.ci
+on:
+  push:
+  pull_request:
+permissions: read-all
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+  cancel-in-progress: true
+jobs:
+  autofix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Trunk install
+        uses: trunk-io/trunk-action/setup@v1
+      - name: Format Codebase
+        run: $TRUNK_PATH fmt -a
+      - name: Autofix
+        uses: autofix-ci/action@v1
