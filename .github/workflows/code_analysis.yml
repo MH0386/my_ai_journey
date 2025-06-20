@@ -7,6 +7,17 @@ concurrency:
   group: ${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 jobs:
+  autofix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Trunk install
+        uses: trunk-io/trunk-action/setup@v1
+      - name: Format Codebase
+        run: trunk fmt -a
+      - name: Autofix
+        uses: autofix-ci/action@v1
   trunk:
     name: Trunk Code Quality
     runs-on: ubuntu-latest
@@ -29,10 +40,6 @@ jobs:
         uses: trunk-io/trunk-action@v1
         with:
           arguments: --github-annotate-new-only=false
-      - name: Format Codebase
-        run: trunk fmt -a
-      - name: Autofix
-        uses: autofix-ci/action@v1
   compatibility:
     name: Check Dependency Compatibility
     runs-on: ubuntu-latest
