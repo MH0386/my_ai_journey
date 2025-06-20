@@ -1,3 +1,4 @@
+fail_fast: false
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
@@ -6,6 +7,7 @@ repos:
       - id: check-toml
       - id: check-json
       - id: trailing-whitespace
+      - id: check-merge-conflict
   - repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.7.13
     hooks:
@@ -13,5 +15,10 @@ repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.12.0
     hooks:
-      - id: ruff
+      - id: ruff-check
+        args: [ --fix ]
       - id: ruff-format
+  - repo: https://github.com/abravalheri/validate-pyproject
+    rev: v0.24.1
+    hooks:
+      - id: validate-pyproject
