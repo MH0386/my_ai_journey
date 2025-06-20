@@ -1,18 +1,39 @@
 name: Code Analysis
 on:
   push:
+    branches:
+      - main
   pull_request:
 permissions: read-all
 concurrency:
-  group: ${{ github.head_ref || github.run_id }}
+  group: ${{ github.workflow }}-${{ github.ref_name }}
   cancel-in-progress: true
 jobs:
+  format_codebase:
+    name: Format Code
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Trunk install
+        uses: trunk-io/trunk-action/setup@v1
+      - name: Format Codebase
+        run: $TRUNK_PATH fmt -a
+      - name: Commit
+        uses: stefanzweifel/git-auto-commit-action@v6
+        with:
+          commit_message: Format the code
   trunk:
     name: Trunk Code Quality
     runs-on: ubuntu-latest
     permissions:
       checks: write
       contents: read
+    needs: [format_codebase, compatibility]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
