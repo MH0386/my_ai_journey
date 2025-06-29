@@ -11,16 +11,4 @@ additional_builtins = ["_", "pretty_output"]
 name = "secrets"
 
 [[transformers]]
-name = "isort"
-
-[[transformers]]
-name = "black"
-
-[[transformers]]
-name = "autopep8"
-
-[[transformers]]
-name = "yapf"
-
-[[transformers]]
 name = "ruff"
