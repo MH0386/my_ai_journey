@@ -13,17 +13,17 @@ runtimes:
     - python@3.10.8
 lint:
   enabled:
-    - gitleaks@8.27.2
-    - ruff-nbqa@0.12.1
+    - gitleaks@8.28.0
+    - ruff-nbqa@0.12.8
     - actionlint@1.7.7
     - black@25.1.0
-    - checkov@3.2.447
+    - checkov@3.2.458
     - git-diff-check
     - markdownlint@0.45.0
-    - renovate@41.14.0
-    - ruff@0.12.1
+    - renovate@41.59.0
+    - ruff@0.12.7
     - taplo@0.9.3
-    - trufflehog@3.89.2
+    - trufflehog@3.90.3
 actions:
   enabled:
     - trunk-upgrade-available
