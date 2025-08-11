@@ -8,7 +8,10 @@ website:
   page-navigation: true
   back-to-top-navigation: true
   repo-url: https://github.com/MH0386/my_ai_journey
-  repo-actions: [ edit, source, issue ]
+  repo-actions:
+    - edit
+    - source
+    - issue
   search:
     location: navbar
     type: overlay
