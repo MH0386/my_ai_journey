@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e36374-ad4b-4e64-b4df-5539e188081b" name="Changes" comment="Refactor renovate.json config for best practices and lockfile maintenance labels. Enable OSV vulnerability alerts with a dashboard summary set to “all”.">
+    <list default="true" id="04e36374-ad4b-4e64-b4df-5539e188081b" name="Changes" comment="update mergify">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/my_ai_journey.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my_ai_journey.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_quarto.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_quarto.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/about.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/index.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +85,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Sync\Development\my_ai_journey\notebooks" />
       <recent name="D:\Sync\Development\my_ai_journey" />
+      <recent name="D:\Sync\Development\my_ai_journey\notebooks" />
       <recent name="D:\Sync\Development\my_ai_journey\website" />
     </key>
   </component>
@@ -109,7 +110,7 @@
       <workItem from="1749585797340" duration="4815000" />
       <workItem from="1754865562054" duration="2124000" />
       <workItem from="1754874679248" duration="4083000" />
-      <workItem from="1754923746323" duration="309000" />
+      <workItem from="1754923746323" duration="1667000" />
     </task>
     <task id="LOCAL-00001" summary="Add autoencoder implementation and update project configuration files&#10;&#10;Integrates an autoencoder model for CIFAR-10 dataset, including noisy image training and visualization. Adds related configuration files for project structure and dependencies (`.idea`, `uv.lock`).">
       <option name="closed" value="true" />
@@ -223,7 +224,23 @@
       <option name="project" value="LOCAL" />
       <updated>1754923955485</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Refactor renovate.json config for best practices and lockfile maintenance labels. Enable OSV vulnerability alerts with a dashboard summary set to “all”.">
+      <option name="closed" value="true" />
+      <created>1754924067378</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1754924067378</updated>
+    </task>
+    <task id="LOCAL-00016" summary="update mergify">
+      <option name="closed" value="true" />
+      <created>1754924491354</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1754924491354</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +271,8 @@
     <MESSAGE value="Update config" />
     <MESSAGE value="Add Quarto" />
     <MESSAGE value="Refactor renovate.json config for best practices and lockfile maintenance labels. Enable OSV vulnerability alerts with a dashboard summary set to “all”." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor renovate.json config for best practices and lockfile maintenance labels. Enable OSV vulnerability alerts with a dashboard summary set to “all”." />
+    <MESSAGE value="update mergify" />
+    <option name="LAST_COMMIT_MESSAGE" value="update mergify" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

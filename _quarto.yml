@@ -15,9 +15,7 @@ website:
   navbar:
     left:
       - text: Home
-        href: website/index.md
-      - text: About
-        href: website/about.md
+        href: index.md
     tools:
       - icon: github
         href: https://github.com/MH0386
