@@ -10,3 +10,4 @@ wheels/
 *.html
 /site_libs/
 /_site/
+*.png
