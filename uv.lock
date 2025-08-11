@@ -1857,7 +1857,7 @@ requires-dist = [
     { name = "matplotlib", specifier = ">=3.10.5" },
     { name = "notebook", specifier = ">=7.4.5" },
     { name = "opencv-python", specifier = ">=4.12.0.88" },
-    { name = "peft", specifier = ">=0.15.2" },
+    { name = "peft", specifier = ">=0.17.0" },
     { name = "python-dotenv", specifier = ">=1.1.1" },
     { name = "scikit-learn", specifier = ">=1.6.1" },
     { name = "seaborn", specifier = ">=0.13.2" },
@@ -1868,7 +1868,7 @@ requires-dist = [
 [package.metadata.requires-dev]
 dev = [
     { name = "ruff", specifier = ">=0.12.8" },
-    { name = "ty", specifier = ">=0.0.1a6" },
+    { name = "ty", specifier = ">=0.0.1a17" },
 ]
 
 [[package]]
