@@ -1,0 +1,41 @@
+project:
+  type: website
+website:
+  title: "MH0386's Jupyter Notebooks"
+  open-graph: true
+  twitter-card:
+    site: "@MH0386"
+  page-navigation: true
+  back-to-top-navigation: true
+  repo-url: https://github.com/MH0386/my_ai_journey
+  repo-actions: [ edit, source, issue ]
+  search:
+    location: navbar
+    type: overlay
+  navbar:
+    left:
+      - text: Home
+        href: website/index.md
+      - text: About
+        href: website/about.md
+    tools:
+      - icon: github
+        href: https://github.com/MH0386
+  sidebar:
+    contents: auto
+  page-footer:
+    left: "Mohamed Hisham Abdelzaher"
+    right:
+      - icon: github
+        href: https://github.com/MH0386
+      - icon: twitter
+        href: https://twitter.com/MH0386
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    theme:
+      - darkly
+    toc: true
+    highlight-style: github
+    page-layout: full
