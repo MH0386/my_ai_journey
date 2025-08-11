@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e36374-ad4b-4e64-b4df-5539e188081b" name="Changes" comment="Set up pre-commit hooks and configuration">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_10_2025_11_54_PM__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_11_2025_12_20_AM_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_11_2025_12_20_AM__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.pre-commit-config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hooks/pre-commit" afterDir="false" />
+    <list default="true" id="04e36374-ad4b-4e64-b4df-5539e188081b" name="Changes" comment="Fix Ruff configuration in .idea/ruff.xml">
+      <change afterPath="$PROJECT_DIR$/.idea/ruff.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.trunk/trunk.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.trunk/trunk.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +23,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="gitbutler/workspace" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -57,22 +60,34 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Development/my_ai_journey&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Sync/Development/my_ai_journey&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.AIAssistantPromptsLibrary&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.koxudaxi.ruff.RuffConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-PY-252.23892.439" />
+        <option value="bundled-python-sdk-b3ae9b5d7125-f0eec537fc84-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.23892.439" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="04e36374-ad4b-4e64-b4df-5539e188081b" name="Changes" comment="" />
@@ -83,6 +98,7 @@
       <workItem from="1749553954231" duration="7641000" />
       <workItem from="1749569955687" duration="6007000" />
       <workItem from="1749585797340" duration="4815000" />
+      <workItem from="1754865562054" duration="2124000" />
     </task>
     <task id="LOCAL-00001" summary="Add autoencoder implementation and update project configuration files&#10;&#10;Integrates an autoencoder model for CIFAR-10 dataset, including noisy image training and visualization. Adds related configuration files for project structure and dependencies (`.idea`, `uv.lock`).">
       <option name="closed" value="true" />
@@ -175,7 +191,8 @@
     <MESSAGE value="Update line separator" />
     <MESSAGE value="format" />
     <MESSAGE value="Set up pre-commit hooks and configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up pre-commit hooks and configuration" />
+    <MESSAGE value="Fix Ruff configuration in .idea/ruff.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Ruff configuration in .idea/ruff.xml" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
