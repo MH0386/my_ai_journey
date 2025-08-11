@@ -6,29 +6,48 @@ plugins:
     - id: trunk
       ref: v1.7.1
       uri: https://github.com/trunk-io/plugins
+    - id: configs
+      ref: v1.1.0
+      uri: https://github.com/trunk-io/configs
 runtimes:
   enabled:
-    - node@18.20.5
+    - node@22.16.0
     - python@3.10.8
 lint:
   enabled:
-    - gitleaks@8.27.2
+    - ty@0.0.1-alpha.16
+    - trufflehog-git@3.90.2
+    - trivy@0.64.1
+    - yamlfmt@0.17.2
+    - gitleaks@8.28.0
     - actionlint@1.7.7
-    - black@25.1.0
-    - checkov@3.2.447
+    - bandit@1.8.6
+    - checkov@3.2.457
     - git-diff-check
     - markdownlint@0.45.0
-    - renovate@41.14.0
-    - ruff@0.12.1
-    - taplo@0.9.3
-    - trufflehog@3.89.2
+    - renovate@41.46.8
+    - ruff@0.12.7:
+        commands:
+          - lint
+          - format
+    - taplo@0.9.3:
+        commands:
+          - lint
+          - format
+    - trufflehog@3.90.2
+    - yamllint@1.37.1
   disabled:
     - prettier
+    - black
     - mypy
     - pylint
 actions:
   enabled:
-    - trunk-upgrade-available
+    - commitizen
+    - trufflehog-pre-commit
+    - uv-lock
+    - uv-sync
     - trunk-announce
-    - trunk-check-pre-push
     - trunk-fmt-pre-commit
+    - trunk-upgrade-available
+    - trunk-check-pre-commit

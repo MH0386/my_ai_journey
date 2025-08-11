@@ -9,4 +9,5 @@ wheels/
 /.quarto/
 *.html
 /site_libs/
-!/_site/
+/_site/
+*.png
