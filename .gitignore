@@ -8,3 +8,4 @@ wheels/
 .ipynb_checkpoints/
 /.quarto/
 *.html
+/site_libs/
