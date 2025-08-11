@@ -19,7 +19,7 @@ dependencies = [
     "scikit-learn>=1.6.1",
     "seaborn>=0.13.2",
     "tensorflow>=2.19.0",
-    "wandb>=0.19.11",
+    "wandb>=0.21.1",
 ]
 
 [dependency-groups]
