@@ -1858,7 +1858,7 @@ requires-dist = [
     { name = "notebook", specifier = ">=7.4.2" },
     { name = "opencv-python", specifier = ">=4.11.0.86" },
     { name = "peft", specifier = ">=0.15.2" },
-    { name = "python-dotenv", specifier = ">=1.1.0" },
+    { name = "python-dotenv", specifier = ">=1.1.1" },
     { name = "scikit-learn", specifier = ">=1.6.1" },
     { name = "seaborn", specifier = ">=0.13.2" },
     { name = "tensorflow", specifier = ">=2.19.0" },
