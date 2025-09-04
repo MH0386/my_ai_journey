@@ -16,9 +16,9 @@ runtimes:
 lint:
   enabled:
     - ruff-nbqa@0.12.11
-    - ty@0.0.1-alpha.19
+    - ty@0.0.1-alpha.20
     - trufflehog-git@3.90.5
-    - trivy@0.65.0
+    - trivy@0.66.0
     - yamlfmt@0.17.2
     - gitleaks@8.28.0
     - actionlint@1.7.7
@@ -26,7 +26,7 @@ lint:
     - checkov@3.2.469
     - git-diff-check
     - markdownlint@0.45.0
-    - renovate@41.93.2
+    - renovate@41.94.0
     - ruff@0.12.11:
         commands:
           - lint
