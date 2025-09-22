@@ -1543,7 +1543,7 @@ requires-dist = [
     { name = "scikit-learn", specifier = ">=1.7.2" },
     { name = "seaborn", specifier = ">=0.13.2" },
     { name = "tensorflow", specifier = ">=2.20.0" },
-    { name = "wandb", specifier = ">=0.21.4" },
+    { name = "wandb", specifier = ">=0.22.0" },
 ]
 
 [package.metadata.requires-dev]
