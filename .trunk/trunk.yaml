@@ -15,7 +15,7 @@ runtimes:
     - python@3.10.8
 lint:
   enabled:
-    - ruff-nbqa@0.13.2
+    - ruff-nbqa@0.13.3
     - ty@0.0.1-alpha.21
     - trufflehog-git@3.90.8
     - trivy@0.67.0
@@ -27,7 +27,7 @@ lint:
     - git-diff-check
     - markdownlint@0.45.0
     - renovate@41.132.5
-    - ruff@0.13.2:
+    - ruff@0.13.3:
         commands:
           - lint
           - format
