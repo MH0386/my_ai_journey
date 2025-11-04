@@ -7,7 +7,7 @@ plugins:
       ref: v1.7.3
       uri: https://github.com/trunk-io/plugins
     - id: configs
-      ref: v1.1.1
+      ref: v1.1.2
       uri: https://github.com/trunk-io/configs
 runtimes:
   enabled:
@@ -26,7 +26,7 @@ lint:
     - checkov@3.2.489
     - git-diff-check
     - markdownlint@0.45.0
-    - renovate@41.167.2
+    - renovate@41.169.1
     - ruff@0.14.3:
         commands:
           - lint
