@@ -393,7 +393,7 @@ wheels = [
 
 [[package]]
 name = "docling"
-version = "2.60.1"
+version = "2.61.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "accelerate" },
@@ -425,14 +425,14 @@ dependencies = [
     { name = "tqdm" },
     { name = "typer" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/05/eb/6db76ba07e5e57ed05aa1cf031d583ec6cd38c14e9f8c2c6395a872a1fb7/docling-2.60.1.tar.gz", hash = "sha256:7205feeea1148ef0d13a7c1184067be29595ef75606f66bc24881343c68fc16b", size = 235217, upload-time = "2025-11-04T11:27:39.795Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/f5/b8/d0d3a69eae7a8bc4ca2935e3b9d597bd7d175f2121e6c281269010ab6bc1/docling-2.61.1.tar.gz", hash = "sha256:ef01c6e148d64d0d7d85ae7c1e6459262282283fbb4a1508fb962f3e96526159", size = 237454, upload-time = "2025-11-06T05:20:34.321Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/12/9a/55d04f94c8ba446b01c38c1eaa45b12f3d7508525d607ec62d44915af6f8/docling-2.60.1-py3-none-any.whl", hash = "sha256:0562cc45e7227b23ba1f7c82cbd5aa71ebfd38ab43c36cec37b433f4846f8822", size = 253120, upload-time = "2025-11-04T11:27:38.228Z" },
+    { url = "https://files.pythonhosted.org/packages/bb/a8/6f760cedd70e23f2704024bcb5d20e2bff562398325277be1c58599abdd3/docling-2.61.1-py3-none-any.whl", hash = "sha256:227980597ebee91b94a5f202bbc4b432366cdd8fd88e3870e6eec7f517be43a3", size = 254666, upload-time = "2025-11-06T05:20:32.269Z" },
 ]
 
 [[package]]
 name = "docling-core"
-version = "2.50.0"
+version = "2.50.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jsonref" },
@@ -446,9 +446,9 @@ dependencies = [
     { name = "typer" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/10/77/e85535b4cfd50eb405269c8f394f3ed9709480ac280cd23d8e40d40f2d25/docling_core-2.50.0.tar.gz", hash = "sha256:86213e99d5e628604c7d58cbf165acacfa9af6e085bd8c5392cca086b3365a6e", size = 167966, upload-time = "2025-10-30T12:37:42.064Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/4e/aa/67810ed6f425c597bc5779560c3e550d23ac8cc76f5f62eddae8406cdaf7/docling_core-2.50.1.tar.gz", hash = "sha256:8afae348abb7f7622899d8664195a5e0bef4b2a872f0df0ed40bcd023970a995", size = 168008, upload-time = "2025-11-04T13:20:07.092Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/da/4d/e0192191eb21faa2fc98e5999363e8f740ad70033fedf8eff928c7113185/docling_core-2.50.0-py3-none-any.whl", hash = "sha256:ec7a2eb293851efdfbe4347d52f257dea10cdebd9c510670de71be3a36de14ae", size = 169280, upload-time = "2025-10-30T12:37:40.673Z" },
+    { url = "https://files.pythonhosted.org/packages/39/af/b1dd00c28bedcebef3f54b4e86d427a951f78818dbd7ea854c37a1a971fe/docling_core-2.50.1-py3-none-any.whl", hash = "sha256:92a34b77e02ed4faad451be36a56c37142e8ae240d87a0dcf58e89df41e256ae", size = 169285, upload-time = "2025-11-04T13:20:05.167Z" },
 ]
 
 [package.optional-dependencies]
@@ -1517,7 +1517,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "bitsandbytes", specifier = ">=0.48.2" },
-    { name = "docling", specifier = ">=2.60.1" },
+    { name = "docling", specifier = ">=2.61.1" },
     { name = "ipykernel", specifier = ">=7.1.0" },
     { name = "ipywidgets", specifier = ">=8.1.8" },
     { name = "jupyter", specifier = ">=1.1.1" },
