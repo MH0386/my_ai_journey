@@ -129,7 +129,6 @@
     check-vcs-permalinks.enable = true;
     check-xml.enable = true;
     check-yaml.enable = true;
-    comrak.enable = true;
     deadnix.enable = true;
     detect-private-keys.enable = true;
     # lychee.enable = true;
