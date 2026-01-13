@@ -1,7 +1,7 @@
 [project]
   dependencies = [
     "bitsandbytes>=0.49.1",
-    "docling>=2.62.0",
+    "docling>=2.68.0",
     "ipykernel>=7.1.0",
     "ipywidgets>=8.1.8",
     "jupyter>=1.1.1",
