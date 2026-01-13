@@ -18,3 +18,6 @@ devenv.local.yaml
 .pre-commit-config.yaml
 .ruff.toml
 .yamllint.yaml
+**/*.quarto_ipynb
+.taplo.toml
+.yamlfmt.yaml
