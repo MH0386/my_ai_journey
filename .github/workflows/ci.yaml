@@ -164,9 +164,6 @@ jobs:
   update_devenv:
     name: Update devenv.sh
     runs-on: ubuntu-latest
-    needs:
-      - compatibility
-      - test
     environment:
       name: devenv
     permissions:
