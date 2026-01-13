@@ -162,7 +162,11 @@
     uv-check.enable = true;
     uv-lock.enable = true;
     yamllint.enable = true;
-    #    treefmt.enable = true;
+    yamlfix = {
+      enable = true;
+      entry = "${lib.getExe pkgs.uv} run yamlfix .";
+      verbose = true;
+    };
   };
 
   treefmt.config = {
