@@ -1,8 +1,6 @@
 {
   pkgs,
   lib,
-  config,
-  inputs,
   ...
 }:
 
@@ -15,6 +13,16 @@
         truthy = "disable";
         comments = "disable";
         line-length.max = 120;
+      };
+    };
+    ".yamlfmt.yaml".yaml = {
+      formatter = {
+        type = "basic";
+        line_ending = "lf";
+        max_line_length = 140;
+        trim_trailing_whitespace = true;
+        eof_newline = true;
+        force_array_style = "block";
       };
     };
     ".ruff.toml".toml = {
@@ -53,13 +61,23 @@
         skip-magic-trailing-comma = false;
       };
     };
+    ".taplo.toml".toml = {
+      exclude = [ ".venv/**" ];
+      formatting = {
+        indent_entries = true;
+        indent_tables = true;
+        reorder_arrays = true;
+        reorder_inline_tables = true;
+        reorder_keys = true;
+      };
+    };
   };
 
   # https://devenv.sh/basics/
   env.GREET = "devenv";
 
   # https://devenv.sh/packages/
-  packages = [ pkgs.git ];
+  packages = [ pkgs.quarto ];
 
   # https://devenv.sh/languages/
   languages.python = {
@@ -78,14 +96,29 @@
   # services.postgres.enable = true;
 
   # https://devenv.sh/scripts/
-  scripts.compatibility-check.exec = ''
-    echo "Checking compatibility"
-    ${lib.getExe pkgs.uv} sync --frozen --no-install-project
-  '';
+  scripts = {
+    compatibility-check.exec = ''
+      echo "Checking compatibility"
+      ${lib.getExe pkgs.uv} sync --frozen --no-install-project
+    '';
+    clean_jupyter.exec = ''
+      echo "Cleaning Jupyter Notebooks"
+      ${lib.getExe pkgs.uv} run nb-clean clean -o -e ./notebooks/
+    '';
+    check_jupyter.exec = ''
+      echo "Checking Jupyter Notebooks"
+      ${lib.getExe pkgs.uv} run nb-clean check -o -e ./notebooks/
+    '';
+    render.exec = ''
+      echo "Rendering"
+      ${lib.getExe pkgs.quarto} render
+    '';
+  };
 
   # https://devenv.sh/basics/
   enterShell = ''
-    git --version # Use packages
+    ${lib.getExe pkgs.git} --version
+    ${lib.getExe pkgs.quarto} --version
   '';
 
   # https://devenv.sh/tasks/
@@ -95,10 +128,10 @@
   # };
 
   # https://devenv.sh/tests/
-  enterTest = ''
-    echo "Running tests"
-    git --version | grep --color=auto "${pkgs.git.version}"
-  '';
+  # enterTest = ''
+  #   echo "Running tests"
+  #   git --version | grep --color=auto "${pkgs.git.version}"
+  # '';
 
   # https://devenv.sh/git-hooks/
   git-hooks.hooks = {
@@ -116,7 +149,6 @@
     check-vcs-permalinks.enable = true;
     check-xml.enable = true;
     check-yaml.enable = true;
-    comrak.enable = true;
     deadnix.enable = true;
     detect-private-keys.enable = true;
     # lychee.enable = true;
@@ -133,9 +165,40 @@
     trim-trailing-whitespace.enable = true;
     trufflehog.enable = true;
     uv-check.enable = true;
-    # uv-export.enable = true;
     uv-lock.enable = true;
     yamllint.enable = true;
+    yamlfmt = {
+      enable = true;
+      settings.lint-only = false;
+    };
+  };
+
+  treefmt.config = {
+    programs = {
+      actionlint.enable = true;
+      deadnix.enable = true;
+      jsonfmt.enable = true;
+      mdformat.enable = true;
+      nixf-diagnose.enable = true;
+      nixfmt.enable = true;
+      statix.enable = true;
+      ruff-check.enable = true;
+      ruff-format.enable = true;
+      taplo.enable = true;
+      yamlfmt = {
+        enable = true;
+        settings = {
+          formatter = {
+            type = "basic";
+            line_ending = "lf";
+            max_line_length = 140;
+            trim_trailing_whitespace = true;
+            eof_newline = true;
+            force_array_style = "block";
+          };
+        };
+      };
+    };
   };
 
   difftastic.enable = true;
