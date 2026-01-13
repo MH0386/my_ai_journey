@@ -59,7 +59,7 @@
   env.GREET = "devenv";
 
   # https://devenv.sh/packages/
-  packages = [ pkgs.quarto];
+  packages = [ pkgs.quarto ];
 
   # https://devenv.sh/languages/
   languages.python = {
