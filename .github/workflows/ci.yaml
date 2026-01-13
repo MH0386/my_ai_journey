@@ -112,6 +112,7 @@ jobs:
     needs:
       - compatibility
       - test
+      - clean_jupyter
     environment:
       name: build
     permissions:
