@@ -184,6 +184,7 @@
         options = [
           "run"
           "yamlfix"
+          "."
         ];
       };
     };
