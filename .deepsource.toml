@@ -1,14 +1,14 @@
 version = 1
 
 [[analyzers]]
-name = "python"
+  name = "python"
 
-[analyzers.meta]
-runtime_version = "3.x.x"
-additional_builtins = ["_", "pretty_output"]
+  [analyzers.meta]
+    additional_builtins = ["_", "pretty_output"]
+    runtime_version = "3.x.x"
 
 [[analyzers]]
-name = "secrets"
+  name = "secrets"
 
 [[transformers]]
-name = "ruff"
+  name = "ruff"
