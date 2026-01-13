@@ -99,7 +99,8 @@
 
   # https://devenv.sh/basics/
   enterShell = ''
-    git --version # Use packages
+    ${lib.getExe pkgs.git} --version
+    ${lib.getExe pkgs.quarto} --version
   '';
 
   # https://devenv.sh/tasks/
