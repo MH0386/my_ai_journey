@@ -9,5 +9,7 @@ queue_rules:
           - "check-success = DeepSource: Secrets"
           - "check-success = DeepSource: Python"
           - check-success = GitGuardian Security Checks
-          - check-success = Check Dependency Compatibility
           - check-success = CodeRabbit
+          - check-success = Check Dependency Compatibility
+          - check-success = Run Tests
+          - check-success = Check Jupyter Notebooks
