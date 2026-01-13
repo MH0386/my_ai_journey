@@ -13,6 +13,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.quarto" />
       <excludeFolder url="file://$MODULE_DIR$/_site" />
       <excludeFolder url="file://$MODULE_DIR$/site_libs" />
+      <excludeFolder url="file://$MODULE_DIR$/.devenv/state/venv" />
     </content>
     <orderEntry type="jdk" jdkName="uv (my_ai_journey)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
