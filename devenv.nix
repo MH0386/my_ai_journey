@@ -145,9 +145,21 @@
     trim-trailing-whitespace.enable = true;
     trufflehog.enable = true;
     uv-check.enable = true;
-    # uv-export.enable = true;
     uv-lock.enable = true;
     yamllint.enable = true;
+  };
+
+  treefmt.config.programs = {
+    actionlint.enable = true;
+    deadnix.enable = true;
+    jsonfmt.enable = true;
+    mdformat.enable = true;
+    nixf-diagnose.enable = true;
+    nixfmt.enable = true;
+    statix.enable = true;
+    ruff-check.enable = true;
+    ruff-format.enable = true;
+    taplo.enable = true;
   };
 
   difftastic.enable = true;
