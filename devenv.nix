@@ -167,7 +167,10 @@
     uv-check.enable = true;
     uv-lock.enable = true;
     yamllint.enable = true;
-    yamlfmt.enable = true;
+    yamlfmt = {
+      enable = true;
+      settings.lint-only = false;
+    };
   };
 
   treefmt.config = {
