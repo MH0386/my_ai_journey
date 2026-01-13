@@ -166,6 +166,7 @@
       enable = true;
       entry = "${lib.getExe pkgs.uv} run yamlfix .";
       verbose = true;
+      types_or = ["**/*.yaml" "**/*.yml"];
     };
   };
 
