@@ -27,6 +27,6 @@ dependencies = [
 [dependency-groups]
 dev = [
     "nb-clean>=4.0.1",
-    "ruff>=0.14.5",
+    "ruff>=0.14.11",
     "ty>=0.0.11",
 ]
