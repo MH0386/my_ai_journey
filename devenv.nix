@@ -15,10 +15,15 @@
         line-length.max = 120;
       };
     };
-    ".yamlfix.toml".toml = {
-      comments_min_spaces_from_content = 1;
-      explicit_start = false;
-      sequence_style = "block_style";
+    ".yamlfmt.yaml".yaml = {
+      formatter = {
+        type = "basic";
+        line_ending = "lf";
+        max_line_length = 140;
+        trim_trailing_whitespace = true;
+        eof_newline = true;
+        force_array_style = "block";
+      };
     };
     ".ruff.toml".toml = {
       target-version = "py313";
@@ -162,6 +167,7 @@
     uv-check.enable = true;
     uv-lock.enable = true;
     yamllint.enable = true;
+    yamlfmt.enable = true;
   };
 
   treefmt.config = {
@@ -176,6 +182,19 @@
       ruff-check.enable = true;
       ruff-format.enable = true;
       taplo.enable = true;
+      yamlfmt = {
+        enable = true;
+        settings = {
+          formatter = {
+            type = "basic";
+            line_ending = "lf";
+            max_line_length = 140;
+            trim_trailing_whitespace = true;
+            eof_newline = true;
+            force_array_style = "block";
+          };
+        };
+      };
     };
   };
 

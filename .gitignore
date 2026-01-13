@@ -20,4 +20,4 @@ devenv.local.yaml
 .yamllint.yaml
 **/*.quarto_ipynb
 /.taplo.toml
-/.yamlfix.toml
+/.yamlfmt.yaml
