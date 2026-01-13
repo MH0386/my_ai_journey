@@ -11,3 +11,8 @@ wheels/
 /site_libs/
 /_site/
 *.png
+.devenv*
+devenv.local.nix
+devenv.local.yaml
+.direnv
+.pre-commit-config.yaml
