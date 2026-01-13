@@ -19,3 +19,5 @@ devenv.local.yaml
 .ruff.toml
 .yamllint.yaml
 **/*.quarto_ipynb
+/.taplo.toml
+/.yamlfix.toml

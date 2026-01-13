@@ -15,6 +15,11 @@
         line-length.max = 120;
       };
     };
+    ".yamlfix.toml".toml = {
+      comments_min_spaces_from_content = 1;
+      explicit_start = false;
+      sequence_style = "block_style";
+    };
     ".ruff.toml".toml = {
       target-version = "py313";
       line-length = 120;
@@ -157,19 +162,31 @@
     uv-check.enable = true;
     uv-lock.enable = true;
     yamllint.enable = true;
+    #    treefmt.enable = true;
   };
 
-  treefmt.config.programs = {
-    actionlint.enable = true;
-    deadnix.enable = true;
-    jsonfmt.enable = true;
-    mdformat.enable = true;
-    nixf-diagnose.enable = true;
-    nixfmt.enable = true;
-    statix.enable = true;
-    ruff-check.enable = true;
-    ruff-format.enable = true;
-    taplo.enable = true;
+  treefmt.config = {
+    programs = {
+      actionlint.enable = true;
+      deadnix.enable = true;
+      jsonfmt.enable = true;
+      mdformat.enable = true;
+      nixf-diagnose.enable = true;
+      nixfmt.enable = true;
+      statix.enable = true;
+      ruff-check.enable = true;
+      ruff-format.enable = true;
+      taplo.enable = true;
+    };
+    settings.formatter = {
+      yamlfix = {
+        command = lib.getExe pkgs.uv;
+        options = [
+          "run"
+          "yamlfix"
+        ];
+      };
+    };
   };
 
   difftastic.enable = true;
