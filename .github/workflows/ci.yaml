@@ -62,7 +62,7 @@ jobs:
           name: devenv
       - name: Install devenv.sh
         run: nix profile install nixpkgs#devenv
-      - name: Check Compatibility
+      - name: Cleaning Jupyter Notebooks
         run: devenv shell clean_jupyter
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@28e16e81777b558cc906c8750092100bbb34c5e3 # v7
