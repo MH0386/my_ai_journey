@@ -15,19 +15,19 @@ runtimes:
     - python@3.10.8
 lint:
   enabled:
-    - ruff-nbqa@0.14.5
-    - ty@0.0.1-alpha.27
-    - trufflehog-git@3.91.0
-    - trivy@0.67.2
-    - yamlfmt@0.20.0
-    - gitleaks@8.29.0
-    - actionlint@1.7.8
-    - bandit@1.9.1
-    - checkov@3.2.494
+    - ruff-nbqa@0.14.11
+    - ty@0.0.11
+    - trufflehog-git@3.92.4
+    - trivy@0.68.2
+    - yamlfmt@0.21.0
+    - gitleaks@8.30.0
+    - actionlint@1.7.10
+    - bandit@1.9.2
+    - checkov@3.2.497
     - git-diff-check
-    - markdownlint@0.46.0
-    - renovate@42.14.4
-    - ruff@0.14.5:
+    - markdownlint@0.47.0
+    - renovate@42.80.1
+    - ruff@0.14.11:
         commands:
           - lint
           - format
@@ -35,7 +35,7 @@ lint:
         commands:
           - lint
           - format
-    - trufflehog@3.91.0
+    - trufflehog@3.92.4
     - yamllint@1.37.1
   disabled:
     - prettier
