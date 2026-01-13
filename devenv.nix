@@ -162,12 +162,6 @@
     uv-check.enable = true;
     uv-lock.enable = true;
     yamllint.enable = true;
-    yamlfix = {
-      enable = true;
-      entry = "${lib.getExe pkgs.uv} run yamlfix .";
-      verbose = true;
-      types_or = [ "yaml" ];
-    };
   };
 
   treefmt.config = {
@@ -182,16 +176,6 @@
       ruff-check.enable = true;
       ruff-format.enable = true;
       taplo.enable = true;
-    };
-    settings.formatter = {
-      yamlfix = {
-        command = lib.getExe pkgs.uv;
-        options = [
-          "run"
-          "yamlfix"
-          "."
-        ];
-      };
     };
   };
 
