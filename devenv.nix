@@ -78,10 +78,24 @@
   # services.postgres.enable = true;
 
   # https://devenv.sh/scripts/
-  scripts.compatibility-check.exec = ''
-    echo "Checking compatibility"
-    ${lib.getExe pkgs.uv} sync --frozen --no-install-project
-  '';
+  scripts = {
+    compatibility-check.exec = ''
+      echo "Checking compatibility"
+      ${lib.getExe pkgs.uv} sync --frozen --no-install-project
+    '';
+    clean_jupyter.exec = ''
+      echo "Cleaning Jupyter Notebooks"
+      ${lib.getExe pkgs.uv} run nb-clean clean -o -e ./notebooks/
+    '';
+    check_jupyter.exec = ''
+      echo "Checking Jupyter Notebooks"
+      ${lib.getExe pkgs.uv} run nb-clean check -o -e ./notebooks/
+    '';
+    render.exec = ''
+      echo "Rendering"
+      ${lib.getExe pkgs.quarto} render
+    '';
+  };
 
   # https://devenv.sh/basics/
   enterShell = ''
