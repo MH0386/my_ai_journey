@@ -25,4 +25,4 @@
   version = "0.1.0"
 
 [dependency-groups]
-  dev = ["nb-clean>=4.0.1", "ruff>=0.14.13", "ty>=0.0.13"]
+  dev = ["nb-clean>=4.0.1", "ruff>=0.14.14", "ty>=0.0.13"]
