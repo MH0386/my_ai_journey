@@ -5,7 +5,7 @@ pull_request_rules:
       - files ~= ^(uv.lock|pyproject.toml)$
       - author = renovate[bot]
       - and:
-          - check-success = Run Tests
+          - check-success = Test
           - check-success = Check Jupyter Notebooks
           - check-success = Check Dependency Compatibility
           - check-success = Clean Jupyter Notebooks
