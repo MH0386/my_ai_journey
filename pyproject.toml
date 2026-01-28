@@ -1,20 +1,18 @@
 [project]
-description = "MH0386's Notebooks"
-name = "mh0386-notebooks"
-readme = "README.md"
-version = "0.0.1"
-dependencies = [
-    "ipykernel>=7.1.0",
-]
+  dependencies = ["ipykernel>=7.1.0"]
+  description = "MH0386's Notebooks"
+  name = "mh0386-notebooks"
+  readme = "README.md"
+  version = "0.0.1"
 
 [dependency-groups]
-dev = ["nb-clean>=4.0.1", "ruff>=0.14.14", "ty>=0.0.14"]
+  dev = ["nb-clean>=4.0.1", "ruff>=0.14.14", "ty>=0.0.14"]
 
 [tool.uv.workspace]
-members = [
-  "notebooks/deep-learning/*",
-  "notebooks/fine-tuning/*",
-  "notebooks/machine-learning/*",
-  "notebooks/pre-processing/*",
-  "notebooks/rag/*",
-]
+  members = [
+    "notebooks/deep-learning/*",
+    "notebooks/fine-tuning/*",
+    "notebooks/machine-learning/*",
+    "notebooks/pre-processing/*",
+    "notebooks/rag/*",
+  ]
